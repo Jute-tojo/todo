@@ -1,0 +1,23 @@
+[33mcommit 7ab1d32fb0724fb7f5342fe45f97b52f9dfba3d1[m[33m ([m[1;36mHEAD -> [m[1;32mtojo[m[33m, [m[1;31morigin/tojo[m[33m)[m
+Author: RAMAROSON Tojo Fanomezantsoa <58684484+Jute-tojo@users.noreply.github.com>
+Date:   Thu Aug 4 16:38:38 2022 +0300
+
+    Suppression de h1
+
+[33mcommit 8197e32b0227f1c993c91ec962d1b48c23a11b78[m
+Author: RAMAROSON Tojo Fanomezantsoa <58684484+Jute-tojo@users.noreply.github.com>
+Date:   Thu Aug 4 16:37:23 2022 +0300
+
+    Changement du texte de h1 dans todo-list
+
+[33mcommit 1711dc7886315e15a7ec72729c9b1be543dd30c3[m
+Author: Jute-tojo <tojoramaroson5@gmail.com>
+Date:   Thu Aug 4 16:34:47 2022 +0300
+
+    changement h1 dans todo-list
+
+[33mcommit d7ffbe8f96f10353457ecde214b6318d5edc6759[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Jute-tojo <tojoramaroson5@gmail.com>
+Date:   Thu Aug 4 15:30:07 2022 +0300
+
+    premier depot
