@@ -30,8 +30,7 @@ export class TodoListPage implements OnInit {
   todoList(){
     this.crudService.getTasks().subscribe(
       (data) => {
-        console.log(data);
-        
+        //console.log(data);
       }
     )
   }
