@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Liste des taches</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <h2>Titre</h2>
+        <p>Manger</p>        
+      </ion-label>
+
+      <div item-end>
+          <ion-button [routerLink]="['/update-todo', 1]">
+            <ion-icon style="zoom: 1.5" name="create"></ion-icon>
+          </ion-button>
+          <ion-button color="danger">
+            <ion-icon style="zoom: 1.5" name="trash"></ion-icon>
+          </ion-button>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
