@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Todo } from 'src/app/models/Todo';
 import { CrudService } from 'src/app/services/crud.service';
 
@@ -9,7 +10,9 @@ import { CrudService } from 'src/app/services/crud.service';
 })
 export class TodoListPage implements OnInit {
   tasks: Todo[];
-  constructor(private crudService: CrudService) { }
+
+  constructor(private crudService: CrudService) {
+   }
 
   ngOnInit() {
     this.crudService.getTasks().subscribe(
@@ -33,6 +36,11 @@ export class TodoListPage implements OnInit {
         //console.log(data);
       }
     )
+  }
+
+  onDelete(id: string){
+    this.crudService.delete(id);
+    console.log('delete');
   }
 
 }

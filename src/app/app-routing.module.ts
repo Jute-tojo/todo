@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'create-todo',
+    redirectTo: 'todo-list',
     pathMatch: 'full'
   },
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./components/create-todo/create-todo.module').then( m => m.CreateTodoPageModule)
   },
   {
-    path: 'update-todo',
+    path: 'update-todo/:id',
     loadChildren: () => import('./components/update-todo/update-todo.module').then( m => m.UpdateTodoPageModule)
   },
   {

@@ -10,10 +10,7 @@ import { CrudService } from 'src/app/services/crud.service';
 })
 export class CreateTodoPage implements OnInit {
   todoForm: FormGroup;
-  /*public todoForm = new FormGroup({
-    title: new FormControl(''),
-    description: new FormControl(''),
-  });*/
+  spinner: boolean = false;
 
   constructor(private crudService: CrudService, public formBuilder:FormBuilder, private router: Router) { }
 
@@ -21,17 +18,17 @@ export class CreateTodoPage implements OnInit {
     this.todoForm = this.formBuilder.group({
       title: [''],
       description: [''],
-    })
+    });
   }
 
   onSubmit(){
+    this.spinner = true;
     if(!this.todoForm.valid){
       console.log('invalid form');
-      
       return false;
     }else{
       this.crudService.create(this.todoForm.value).then(
-        () => {
+        () => {          
           this.todoForm.reset();
           this.router.navigate(['/todo-list']);
         }
@@ -39,7 +36,11 @@ export class CreateTodoPage implements OnInit {
         (err) => {
           console.log(err);
         }
-      );
+      ).finally(
+        () => {
+          this.spinner = false;
+        }
+      )
     }
   }
 }

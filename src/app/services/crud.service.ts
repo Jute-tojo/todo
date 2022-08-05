@@ -23,7 +23,7 @@ export class CrudService {
   }
 
   update(id: string, todo: Todo){
-    this.ngFirestore.collection('tasks').doc(id)
+    return this.ngFirestore.collection('tasks').doc(id)
       .update(todo).then(
         () => {
           this.router.navigate(['/todo-list'])
@@ -31,12 +31,11 @@ export class CrudService {
       ).catch(
         (error) => {
           console.log(error);
-          
         }
-      )
+      );
   }
 
   delete(id: string){
-    this.ngFirestore.doc('tasks/'+id).delete();
+    return this.ngFirestore.doc('tasks/'+id).delete();
   }
 }
